@@ -47,7 +47,6 @@
 ```bash
 # Клонирование репозитория
 git clone https://github.com/Keeg4n/Weather.git
-cd Find-a-pare
 
 # Установка зависимостей
 npm install
