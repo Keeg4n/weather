@@ -1,73 +1,58 @@
-# React + TypeScript + Vite
+# 🌤️ Метео Прогноз
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Веб-приложение для просмотра актуальной погоды в реальном времени. Приложение использует WeatherAPI для получения точных метеорологических данных.
 
-Currently, two official plugins are available:
+## 🚀 Демо
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Приложение доступно по ссылке: [https://keeg4n.github.io/Weather/](https://keeg4n.github.io/Weather/)
 
-## React Compiler
+## ✨ Возможности
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🌍 Основной функционал
+- **Погода по местоположению** - автоматическое определение геолокации
+- **Добавление городов** - поиск и сохранение любых городов мира
+- **Переключение между городами** - быстрый доступ к сохраненным локациям
+- **Удаление городов** - управление списком избранных мест
 
-## Expanding the ESLint configuration
+### ⚙️ Настройки отображения
+- **Единицы измерения** - переключение между Цельсием и Фаренгейтом
+- **Дополнительные параметры**:
+  - Ощущаемая температура
+  - Влажность воздуха
+  - Скорость и направление ветра
+  - Атмосферное давление
+  - УФ-индекс
+  - Видимость
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 💾 Сохранение данных
+- **Local Storage** - все настройки и города сохраняются локально
+- **Автосохранение** - изменения сохраняются автоматически
+- **Восстановление** - данные сохраняются после перезагрузки страницы
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠 Технологии
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **React 18** - современные хуки и функциональные компоненты
+- **Zustand** - легковесное управление состоянием приложения
+- **Material-UI (MUI)** - библиотека компонентов для современного UI
+- **Tailwind CSS** - утилитарные стили для быстрой разработки
+- **WeatherAPI** - надежный источник метеорологических данных
+- **GitHub Pages** - хостинг и автоматический деплой
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 Быстрый старт
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Предварительные требования
+- Node.js 16 или выше
+- npm или yarn
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Установка и запуск
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Клонирование репозитория
+git clone https://github.com/Keeg4n/Weather.git
+
+# Установка зависимостей
+npm install
+
+# Запуск в режиме разработки
+npm run dev
 ```
